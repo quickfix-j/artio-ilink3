@@ -42,7 +42,7 @@ def junitVersion = '5.10.3'
 def mockitoVersion = '4.11.0'
 def hdrHistogramVersion = '2.2.2'
 def jmhVersion = '1.37'
-def byteBuddyVersion = '1.14.16'
+def byteBuddyVersion = '1.14.18'
 
 def agronaVersion = '1.21.2'
 def sbeVersion = '1.31.1'
@@ -944,4 +944,17 @@ tasks.register('copyTestLogs', Copy) {
     into 'build/test_logs'
 
     includeEmptyDirs = false
+}
+
+def isNonStable = { String version ->
+    def stableKeyword = ['RELEASE', 'FINAL', 'GA'].any { it -> version.toUpperCase().contains(it) }
+    def regex = /^[0-9,.v-]+(-r)?$/
+    return !stableKeyword && !(version ==~ regex)
+}
+
+tasks.named('dependencyUpdates').configure {
+    // Reject all non stable versions
+    rejectVersionIf {
+        isNonStable(it.candidate.version)
+    }
 }
