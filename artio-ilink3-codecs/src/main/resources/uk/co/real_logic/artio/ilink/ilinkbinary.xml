@@ -58,7 +58,7 @@
         <type name="StringLength35" description="String with length of 35" presence="optional" length="35" primitiveType="char" semanticType="String"/>
         <type name="StringLength6" description="StringLength6" presence="optional" length="6" primitiveType="char" semanticType="String"/>
         <type name="UDI" description="UDI" presence="constant" length="1" primitiveType="char" semanticType="char">Y</type>
-        <type name="charNULL" description="Char with null value" presence="optional" nullValue="0" primitiveType="char" semanticType="char"/>
+        <type name="charNULL" description="Char with null value" presence="optional" primitiveType="char" semanticType="char"/>
         <type name="enumNULL" presence="optional" nullValue="255" primitiveType="uint8"/>
         <type name="uInt16" description="uInt16" primitiveType="uint16" semanticType="int"/>
         <type name="uInt16NULL" description="Unsigned Int16 with NULL" presence="optional" nullValue="65535" primitiveType="uint16" semanticType="int"/>
