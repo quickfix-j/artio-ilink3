@@ -19,7 +19,7 @@ public enum ExecMode
     /**
      * To be used to represent not present or null.
      */
-    NULL_VAL((byte)48);
+    NULL_VAL((byte)0);
 
     private final byte value;
 
@@ -50,7 +50,7 @@ public enum ExecMode
         {
             case 65: return Aggressive;
             case 80: return Passive;
-            case 48: return NULL_VAL;
+            case 0: return NULL_VAL;
         }
 
         throw new IllegalArgumentException("Unknown value: " + value);

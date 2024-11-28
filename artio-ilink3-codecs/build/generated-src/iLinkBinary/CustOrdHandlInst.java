@@ -43,7 +43,7 @@ public enum CustOrdHandlInst
     /**
      * To be used to represent not present or null.
      */
-    NULL_VAL((byte)48);
+    NULL_VAL((byte)0);
 
     private final byte value;
 
@@ -78,7 +78,7 @@ public enum CustOrdHandlInst
             case 72: return AlgoEngine;
             case 87: return DeskElectronic;
             case 89: return ClientElectronic;
-            case 48: return NULL_VAL;
+            case 0: return NULL_VAL;
         }
 
         throw new IllegalArgumentException("Unknown value: " + value);

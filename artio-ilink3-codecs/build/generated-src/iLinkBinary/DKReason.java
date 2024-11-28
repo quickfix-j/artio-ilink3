@@ -55,7 +55,7 @@ public enum DKReason
     /**
      * To be used to represent not present or null.
      */
-    NULL_VAL((byte)48);
+    NULL_VAL((byte)0);
 
     private final byte value;
 
@@ -92,7 +92,7 @@ public enum DKReason
             case 70: return CalculationDifference;
             case 71: return NoMatchingExecutionReport;
             case 90: return Other;
-            case 48: return NULL_VAL;
+            case 0: return NULL_VAL;
         }
 
         throw new IllegalArgumentException("Unknown value: " + value);

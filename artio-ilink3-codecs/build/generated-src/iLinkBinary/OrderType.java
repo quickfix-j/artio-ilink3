@@ -31,7 +31,7 @@ public enum OrderType
     /**
      * To be used to represent not present or null.
      */
-    NULL_VAL((byte)48);
+    NULL_VAL((byte)0);
 
     private final byte value;
 
@@ -64,7 +64,7 @@ public enum OrderType
             case 50: return Limit;
             case 52: return StopLimit;
             case 75: return MarketWithLeftoverAsLimit;
-            case 48: return NULL_VAL;
+            case 0: return NULL_VAL;
         }
 
         throw new IllegalArgumentException("Unknown value: " + value);

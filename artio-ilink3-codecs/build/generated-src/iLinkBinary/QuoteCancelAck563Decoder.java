@@ -1287,7 +1287,7 @@ public final class QuoteCancelAck563Decoder implements MessageDecoderFlyweight
 
     public static byte unsolicitedCancelTypeNullValue()
     {
-        return (byte)48;
+        return (byte)0;
     }
 
     public static byte unsolicitedCancelTypeMinValue()

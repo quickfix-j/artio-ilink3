@@ -1254,7 +1254,7 @@ public final class QuoteCancelAck563Encoder implements MessageEncoderFlyweight
 
     public static byte unsolicitedCancelTypeNullValue()
     {
-        return (byte)48;
+        return (byte)0;
     }
 
     public static byte unsolicitedCancelTypeMinValue()
