@@ -775,6 +775,8 @@ public final class InternalILink3Connection extends InternalFixPConnection imple
         initiateReply = null;
         nextReceiveMessageTimeInMs = nextRecvTimeoutInMs();
 
+        handler.onEstablishmentAck(this, previousUUID, previousSeqNo, uUID, lastUuid, nextSeqNo);
+
         if (previousUUID == lastUuid)
         {
             if (previousSeqNo > lastConnectionLastReceivedSequenceNumber)

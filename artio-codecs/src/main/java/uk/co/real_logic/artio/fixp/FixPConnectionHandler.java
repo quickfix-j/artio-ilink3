@@ -105,6 +105,14 @@ public interface FixPConnectionHandler
         return Action.CONTINUE;
     }
 
+    default Action onEstablishmentAck(
+        final FixPConnection connection, long previousUuid, long previousSeqNo, long uuid, long lastuuid,
+        long nextSeqNo)
+    {
+        // default for backwards compatibility.
+        return Action.CONTINUE;
+    }
+
     /**
      * Callback triggered by a timeout on a retransmit request. See
      * {@link Builder#retransmitNotificationTimeoutInMs(int)} for details.
